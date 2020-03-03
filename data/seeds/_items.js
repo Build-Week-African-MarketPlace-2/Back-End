@@ -1,6 +1,8 @@
 
 exports.seed = function(knex) {
-  return knex('items').insert([
+  return knex('items').truncate()
+  .then(function(){
+    return knex('items').insert ([
     {name: 'Neon Wrap Bracelet', description: "silver and green neon", price: 12, location: "Lagos", category: "Jewerly", user_id: 2, },
     {name: 'DJembe Drum', description: "Hand carved", price: 60, location: "West Africa", category: "Instruments", user_id: 2},
     {name: 'Tassel Earring', description: "Green and red bets", price: 12, location: "Niger", category: "Jewerly", user_id: 3},
@@ -13,4 +15,5 @@ exports.seed = function(knex) {
     {name: 'Ground Nuts', description: "seed testing data", price: 6, location: "Juba", category: "Seeds & Nuts", user_id: 5},
     {name: 'Cabbages', description: "seed testing data", price: 9, location: "Sauti", category: "Vegetables", user_id: 1}
   ]);
+});
 };
