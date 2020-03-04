@@ -8,6 +8,7 @@ exports.up = function(knex) {
         .unique();
       users.string('password', 128).notNullable();
       users.string('department', 128)
+      items.integer('user_id',128)
     })
     .createTable('items', items => {
         items.increments();
@@ -15,11 +16,11 @@ exports.up = function(knex) {
         items.text('description');
         items.text('price');
         items.text('location');
-        items.text('category');
-        items.integer('user_id')
-          .unsigned()
+        items.text('category')
+        // items.integer('user_id')
+          // .unsigned()
           // .notNullable()
-          .references('id')
+          // .references('id')
           .inTable('users')
           .onUpdate('CASCADE')
           .onDelete('CASCADE');
