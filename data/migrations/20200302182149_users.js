@@ -18,7 +18,7 @@ exports.up = function(knex) {
         items.text('category');
         items.integer('user_id')
           .unsigned()
-          .notNullable()
+          // .notNullable()
           .references('id')
           .inTable('users')
           .onUpdate('CASCADE')

@@ -14,6 +14,7 @@ router.post("/additem", restricted, validateItemsContent, (req, res) => {
     })
     .catch(err => {
       res.status(500).json(err);
+      console.log(err)
     });
 });
 
