@@ -8,7 +8,6 @@ exports.up = function(knex) {
         .unique();
       users.string('password', 128).notNullable();
       users.string('department', 128)
-      users.integer('user_id',128)
     })
     .createTable('items', items => {
         items.increments();
