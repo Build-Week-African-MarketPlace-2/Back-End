@@ -25,3 +25,7 @@ Items Routes
 |PUT|/items/:id|YES|Edits item|
 |DELETE|/items/:id|YES|Deletes item by id|
 |GET|/items/category|YES|Gets all items by category|
+
+
+
+PVC: https://docs.google.com/document/d/1fUOB4TUeokYFQ7Zawy9YAxfhwpQPRdfGcSVPg0IZfhU/edit#
